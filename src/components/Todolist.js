@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Todotable from './Todotable';
 
+
 export default function Todolist() {
     const [todo, setTodo] = useState({desc: '', date: ''});
     const [todos, setTodos] = useState([]);
@@ -14,8 +15,8 @@ export default function Todolist() {
       setTodos([...todos, todo]);
     }
 
-    const deleteTodo = () => {
-      setTodos(todos.filter((todo, i) => i !== todo.index));
+    const deleteTodo = (index) => {
+      setTodos(todos.filter((todo, i) => i !== index));
     }
 
     return (

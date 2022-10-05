@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function Todotable(props) {
+
     return(
       <div>
         <table>
@@ -17,7 +18,7 @@ export default function Todotable(props) {
               <tr key={index}>
                 <td>{todo.date}</td>
                 <td>{todo.desc}</td>
-                <td><button onClick={props.deleteTodo}>Delete</button></td>
+                <td><button onClick={() => props.deleteTodo(index)}>Delete</button></td>
               </tr>
             )
             }
